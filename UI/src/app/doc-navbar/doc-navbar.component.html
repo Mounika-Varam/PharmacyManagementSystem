@@ -1,0 +1,37 @@
+<div class="container">
+    <mat-toolbar>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <img src="../../assets/pharmaLogo4.png" class="logo">
+        <mat-menu #menu="matMenu">
+            <div *ngIf="!isAdmin()">
+            <a class="link" mat-menu-item routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"><mat-icon>home</mat-icon> Home</a>
+            <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item routerLink="/order-drug" routerLinkActive="active-link"><mat-icon>medical_services</mat-icon>Drugs</a>
+            <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item routerLink="/your-orders" routerLinkActive="active-link"><mat-icon>add_shopping_cart</mat-icon>Your Orders</a>
+
+            </div>
+            <div *ngIf="isAdmin()">
+                <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item routerLink="/orders" routerLinkActive="active-link"><mat-icon>add_shopping_cart</mat-icon>Doctor orders</a>
+                <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item routerLink="/suppliers" routerLinkActive="active-link"><mat-icon>people</mat-icon>Suppliers</a>
+                <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item routerLink="/drugs" routerLinkActive="active-link"><mat-icon>medical_services</mat-icon>Drugs</a>
+                <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item routerLink="/sales-report" routerLinkActive="active-link"><mat-icon>bar_chart</mat-icon>Sales Report</a>
+                <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item routerLink="/expired-drugs" routerLinkActive="active-link"><mat-icon>access_time_expired</mat-icon>Expired Drugs</a>
+                <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item routerLink="/out-of-stock-drugs" routerLinkActive="active-link"><mat-icon>highlight_off</mat-icon>Out Of Stock Drugs</a>    
+            </div>
+                
+    
+            <!-- <a class="link" mat-list-item routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"><mat-icon>dashboard</mat-icon> Dashboard</a> -->
+                       
+            
+            <a *ngIf="!isUserAuthenticated()" class="link" mat-menu-item routerLink="/login" routerLinkActive="active-link"><mat-icon>login</mat-icon>Login</a>
+            <a *ngIf="isUserAuthenticated()" class="link" mat-menu-item  (click)="logOut()">LogOut<mat-icon>logout</mat-icon></a>
+
+
+            <!-- <li *ngIf="!isUserAuthenticated()"><a routerLink="/login">Login</a></li>
+            <li *ngIf="isUserAuthenticated()"><a class="logout" (click)="logOut()">Log out</a></li> -->
+          
+        </mat-menu> 
+    </mat-toolbar>
+</div>
+

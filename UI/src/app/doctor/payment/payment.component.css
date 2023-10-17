@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
+    padding-top: 50px;
+}
+.content{
+    background:  #FEFBF3;
+    height: calc(100vh - 50px);
+    margin: 0;
+    width: 100%;
+
+}
+
+.mat-mdc-button:not(:disabled){
+    color: #FEFBF3;
+}
+
+.mdc-button{
+    background-color:#0E8388;
+    color: #FEFBF3;
+    margin-left: 10px;
+}
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: #0E8388;
+}
+
+mat-card {
+    padding: 20px;
+}
+
+mat-form-field {
+    margin-top: 15px;
+}
+
+mat-card-title {
+    color:#c50000;
+}

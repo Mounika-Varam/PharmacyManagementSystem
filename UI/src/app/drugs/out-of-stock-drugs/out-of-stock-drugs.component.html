@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Out Of Stock Drugs <span class="material-symbols-outlined">hourglass_empty</span></h1>   
+</div>
+<div class="card-container">
+    <mat-card>
+        <img mat-card-image src="../../../assets/outofstock.png" alt="outofstock Drug Image">
+        <mat-card-content>
+          <mat-list role="list">
+              <mat-list-item role="listitem" *ngFor="let drug of drugs" class="list-text">{{drug.drugName}}</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+</div>
+</div>
+

@@ -1,0 +1,89 @@
+<div class="container">
+    <div>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Register <mat-icon>person</mat-icon></mat-card-title>
+                <mat-card-subtitle>Already have an account? <a routerLink="/login">Login</a></mat-card-subtitle>
+            </mat-card-header>
+            
+            <!-- username: '',
+    password: '',
+    fullName: '',
+    phoneNumber: '',
+    gender: Gender.Male,
+    Role: 'user' -->
+            <mat-card-content>
+                <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+                      <div *ngIf="invalidLogin" class="alert">Invalid details.</div>
+                      <div class="row">
+                        <div class="col-xs-6">
+                            <mat-form-field>
+                              <mat-label for="fullName" class="sr-only">Full Name</mat-label>
+                              <input matInput type="text" id="fullName" name="fullName" [(ngModel)]="credentials.fullName" placeholder="Full Name" required minlength="2" pattern="^[A-Za-z]+$">
+                              <mat-error>Invalid Full Name.</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-xs-6">
+         
+                            <mat-form-field>
+                                <mat-label for="gender" class="sr-only">Gender</mat-label>
+                                <mat-select [(ngModel)]="credentials.gender" id="gender" name="gender" required>
+                                    <mat-option *ngFor="let gender of gender" [value]="gender">
+                                     {{getGenderName(gender)}}
+                                    </mat-option>
+                                </mat-select>
+                                <!-- <mat-label for="gender" class="sr-only">Gender</mat-label>
+                              <input matInput type="" id="gender" name="gender" [(ngModel)]="credentials.gender" placeholder="Gender" required> -->
+                            </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-6">
+                            <mat-form-field>
+                                <mat-label for="phoneNumber" class="sr-only">Phone Number</mat-label>
+                              <input matInput type="string" id="phoneNumber" name="phoneNumber" [(ngModel)]="credentials.phoneNumber" placeholder="Phone Number" required pattern="^[0-9]{10}$">
+                              <mat-error>Invalid Phone Number.</mat-error>
+                              <mat-error *ngIf="registerForm.controls['phoneNumber'].errors?.['pattern']">Phone Number must contain 10 digits.</mat-error>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-xs-6">
+                            <mat-form-field>
+
+                                <mat-label for="role" class="sr-only">Role</mat-label>
+                                <mat-select [(ngModel)]="credentials.role" id="role" name="role" required>
+                                    <mat-option *ngFor="let role of roles" [value]="role">
+                                    {{role}}
+                                    </mat-option>
+                                </mat-select>
+                                <mat-error>Role is required.</mat-error>
+                              <!-- <input matInput type="" id="role" name="role" [(ngModel)]="credentials.role" placeholder="role" required> -->
+                              </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                            <mat-form-field>
+                                <mat-label for="username" class="sr-only">Email address</mat-label>
+                              <input matInput type="email" id="username" name="username" [(ngModel)]="credentials.username" placeholder="User Name" required pattern="^[^@\\s]+@[^@\\s]+\\.(com|net|org|gov)$">
+                              <mat-error>Invalid Email.</mat-error>
+                            </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                            <mat-form-field>
+                                <mat-label for="password" class="sr-only">Password</mat-label>
+                              <input matInput type="password" id="password" name="password" [(ngModel)]="credentials.password" placeholder="Password" required>
+                              <mat-error>Password is required.</mat-error>  
+                            </mat-form-field> 
+                        </div>
+                      </div>
+            
+
+                      <button mat-flat-button type="submit" [disabled]="!registerForm.valid">Register</button>
+                  </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

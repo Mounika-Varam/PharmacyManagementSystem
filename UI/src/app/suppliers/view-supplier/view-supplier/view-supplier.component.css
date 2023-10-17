@@ -1,0 +1,60 @@
+::ng-deep .mdc-button .mat-icon{
+    color:#EAEAEA;
+}
+
+.top-row{
+    padding: 1em 0 ;
+}
+.mat-mdc-unelevated-button.mat-unthemed{
+    background-color:#0E8388;
+    color: #FEFBF3;
+}
+
+.mat-mdc-form-field{
+    width: 100%;
+}
+
+.form-container{
+    margin: 40px;
+    
+}
+
+/* .container{
+    background-color: #C2DEDC;
+    padding: 20px;
+} */
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: #0E8388;
+}
+
+::ng-deep .mat-calendar-body-selected{
+    background-color: #0E8388;
+}
+
+::ng-deep mat-calendar{
+    background-color: #FEFBF3;
+}
+
+.container{
+    height: calc(100vh - 50px); 
+    background:  #F7F7F7;
+    margin: 0;
+    width: 100%;
+}
+
+.content{
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.mat-elevation-z8{
+    padding: 20px;
+    background: white;
+    width: 60%;
+}
+.page-header{
+    padding: 20px;
+}

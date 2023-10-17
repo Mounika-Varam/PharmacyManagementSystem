@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="container">
+    <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Payment</mat-card-title>
+          <mat-card-subtitle>Amount to be paid: {{payment.amount | currency:"&#8377;"}} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="form-field">
+                <mat-label>Payment Method</mat-label>
+                <!-- <input matInput type="t" [(ngModel)]="payment.method" name="quantity"> -->
+                <mat-select [(ngModel)]="payment.method" name="method">
+                    <mat-option *ngFor="let method of paymentMethods" [value]="method">
+                      {{getPaymentMethodName(method)}}
+                    </mat-option>
+                  </mat-select>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click) = "makePayment()">Make Payment</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
+</div>

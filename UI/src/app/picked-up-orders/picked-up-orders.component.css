@@ -1,0 +1,61 @@
+
+::ng-deep .mat-mdc-select-panel{
+    background-color: #79B4B7 ;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled){
+    background-color: #FEFBF3;
+}
+
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::after{
+    border-bottom-color: #79B4B7 ;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: #0E8388;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48;
+  color: #0E8388;
+  /* fill: #0E8388; */
+}
+
+.mat-icon{
+    color:#0E8388;
+}
+
+::ng-deep .mdc-button .mat-icon{
+    color:#EAEAEA;
+}
+
+
+.mat-mdc-unelevated-button.mat-unthemed{
+    background-color:#0E8388;
+    color: #FEFBF3;
+}
+
+.top-row{
+    margin: 20px;
+    padding: 10px;
+}
+
+.mat-mdc-table{
+    margin:0px;
+    text-align: center;
+    align-items: center;
+    background: white;
+}
+
+::ng-deep .mdc-button .mat-icon{
+    color:#EAEAEA;
+}
+mat-paginator, .mat-elevation-z8{
+    background: white;
+}
+
+

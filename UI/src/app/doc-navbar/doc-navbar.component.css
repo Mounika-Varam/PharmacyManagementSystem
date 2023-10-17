@@ -1,0 +1,29 @@
+.container{
+    background-color: #79B4B7;
+    height: 100%;    
+    width: 100%;
+}
+
+mat-toolbar{
+    height: 50px;
+    width: 100%;
+    background: #79B4B7;
+}
+.mat-mdc-unelevated-button.mat-unthemed{
+    background-color:#0E8388;
+    color: #FEFBF3;
+}
+
+.mat-icon{
+    color:#FEFBF3;
+}
+
+.link .mat-icon{
+    color:#0E8388;
+}
+
+.logo {
+    height: 40px;
+    padding-left: 10px;
+}
+

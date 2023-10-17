@@ -1,0 +1,32 @@
+.home-page{
+    /* height: 100%; */
+    height: calc(100vh - 50px);
+    background: url("../../assets/b4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.heading h1 {
+    padding-top: 80px;
+    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    color:#c50000;
+  }
+  .heading span {
+    text-transform: none;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic; 
+    font-family: "Playfair Display","Bookman",serif;
+    color:#999; 
+  }
+  
+  
+
+
+

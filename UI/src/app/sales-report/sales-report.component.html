@@ -1,0 +1,111 @@
+<div #pdfContent class="container">
+  <div class="page-header">
+    <div class="row">
+        <h1 class = "col-xs-6">Sales Report <span class="material-symbols-outlined">bar_chart</span></h1>   
+    <span class="col-xs-6 row end-xs">
+        <a mat-flat-button (click) = "generatePDF()" id = "button"><mat-icon>download</mat-icon> Download </a>
+        <!-- <a mat-fab extended routerLink="/drugs"><mat-icon>arrow_back</mat-icon> Go Back</a> -->
+    </span>
+    </div>
+    
+  </div>
+
+  <mat-tab-group>
+    <mat-tab label="Sales Per Day"> 
+        <div class="table-container">
+            <div class="m-4 table-content">
+      
+                <table mat-table [dataSource]="dayDataSource" matSort class="mat-elevation-z8">
+            
+                  <ng-container matColumnDef="day">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Day</th>
+                    <td mat-cell *matCellDef="let row"> {{row['day']}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="sales">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Sales </th>
+                    <td mat-cell *matCellDef="let row"> {{row['sales']}} </td>
+                  </ng-container>
+          
+                  <tr mat-header-row *matHeaderRowDef="displayDayColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayDayColumns;"></tr>
+                </table>
+          
+              </div>   
+        </div>
+       
+    </mat-tab>
+    <mat-tab label="Sales Per Month"> 
+        <div class="table-container" >
+            <div class="m-4 table-content">
+          
+                <table mat-table [dataSource]="monthDataSource" matSort class="mat-elevation-z8">
+            
+                  <ng-container matColumnDef="month">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Month</th>
+                    <td mat-cell *matCellDef="let row"> {{row['month']}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="sales">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Sales </th>
+                    <td mat-cell *matCellDef="let row"> {{row['sales']}} </td>
+                  </ng-container>
+          
+                  <tr mat-header-row *matHeaderRowDef="displayMonthColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayMonthColumns;"></tr>
+                </table>
+          
+              </div>  
+        </div>
+        
+    </mat-tab>
+    <mat-tab label="Sales Per Year">  
+        <div class="table-container">
+            <div class="m-4 table-content">
+      
+                <table mat-table [dataSource]="yearDataSource" matSort class="mat-elevation-z8">
+            
+                  <ng-container matColumnDef="year">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Year</th>
+                    <td mat-cell *matCellDef="let row"> {{row['year']}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="sales">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Sales </th>
+                    <td mat-cell *matCellDef="let row"> {{row['sales']}} </td>
+                  </ng-container>
+          
+                  <tr mat-header-row *matHeaderRowDef="displayYearColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayYearColumns;"></tr>
+                </table>
+          
+              </div>   
+        </div>
+       
+    </mat-tab>
+    <mat-tab label="Sales Per Drug"> 
+        <div class="table-container">
+            <div class="m-4  table-content">
+          
+                <table mat-table [dataSource]="drugDataSource" matSort class="mat-elevation-z8">
+            
+                  <ng-container matColumnDef="drugName">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Drug</th>
+                    <td mat-cell *matCellDef="let row"> {{row['drugName']}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="sales">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Sales </th>
+                    <td mat-cell *matCellDef="let row"> {{row['sales']}} </td>
+                  </ng-container>
+          
+                  <tr mat-header-row *matHeaderRowDef="displayDrugColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayDrugColumns;"></tr>
+                </table>
+          
+              </div>   
+        </div>
+      
+    </mat-tab>
+  </mat-tab-group>
+</div>

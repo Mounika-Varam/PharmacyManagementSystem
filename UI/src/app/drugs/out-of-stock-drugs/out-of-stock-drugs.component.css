@@ -1,0 +1,33 @@
+mat-card{
+    width: 30%;
+}
+
+.card-container{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* margin: 20px; */
+    /* padding: 20px; */
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48;
+    color: #0E8388;
+    /* fill: #0E8388; */
+  }
+
+  ::ng-deep .list-text .mdc-list-item__primary-text{
+    color: black !important;
+  }
+
+  .container{
+    height: calc(100vh - 50px); 
+    background:  #FEFBF3;
+    margin: 0;
+    width: 100%;
+}

@@ -1,0 +1,63 @@
+img{
+    width: 110%;
+}
+.content{
+    background:  #F7F7F7;
+    height: calc(100vh - 50px);
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin: -10px; Negative margin to create space between the cards */
+  }
+
+  .card{
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%; /* Adjust the width of each card item as needed */
+    margin: 20px; /* Margin around each card item */
+  }
+
+  /* mat-card{
+    background:  #FEFBF3;
+  } */
+
+  mat-card-header{
+    color: #c50000;
+  }
+
+  .mat-mdc-unelevated-button.mat-unthemed{
+    background-color:#0E8388;
+    color: #FEFBF3;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
+  color: #0E8388;
+}
+
+.mat-mdc-form-field{
+  width: 60%;
+  background: white;
+}
+
+.details{
+  padding: 20px;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+::ng-deep .mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic{
+  stroke: 0E8388;
+}
+
+
+
+
+
+
